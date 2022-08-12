@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto News of the Day</title>
+    <style>
+        .left {
+            width: 100vw;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+        .center {
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <tr>
+        <td>
+            <h1>Crypto News of the Day</h1>
+        </td>
+    </tr>
+    
+    <table>
+        <form action="/articles" method="POST">
+            <tr>
+                <td><button type="submit">Save</form></td>
+            </tr>
+            <tr data-th-each="l: ${list}" class="">
+                <td>
+                    <img width="200" height = "200" data-th-src="${l.imageurl}" >
+                </td>
+                <td class="">
+                    <input type="checkbox" name="/articles" th:value="${l.id}"/>
+                        <label th:text="${l.id}"></label></th:block>
+                        <br><br>
+                        Id: <strong data-th-text="${l.id}"></strong>
+                        <br><br>
+                        Published on: <strong data-th-text="${l.published_on}"></strong>
+                        <br><br>
+                        Title:<strong data-th-text="${l.title}"></strong>
+                        <br><br>
+                        <a th:href="@{''+${l.url}}">View Article Here</a>
+                        <br><br>
+                        Body: <strong data-th-text="${l.body}"></strong>
+                        <br><br>
+                        Tags: <strong data-th-text="${l.tags}"></strong>
+                        <br><br>
+                        Categories: <strong data-th-text="${l.categories}"></strong>
+                        <br><br><br><br>
+                </td>
+            </tr>
+        </form>       
+    </table>
+
+
+    <!-- <form method="POST" action="/article">
+        <table>
+            <tr>
+                
+                <td> <button type="submit">Save</button> </td>
+            </tr>
+    
+
+    <div class= "left" data-th-each="l: ${list}">
+        <table>
+            <tr>
+                <td>
+                    <span>
+                        <img width="200" height = "200" data-th-src="${l.imageurl}" >
+                        
+                    </span>
+                    <span>
+                        
+                        <input type="checkbox" name="cers" th:value="${l.id}"/>
+                        <label th:text="${l.id}"></label></th:block>
+                        Id: <strong data-th-text="${l.id}"></strong>
+                        <br>
+                        Published on: <strong data-th-text="${l.published_on}"></strong>
+                        
+                        Title:<strong data-th-text="${l.title}"></strong>
+                        
+                        
+                        <a th:href="@{''+${l.url}}">View Article Here</a>
+                        
+                        Body: <strong data-th-text="${l.body}"></strong>
+                        Tags: <strong data-th-text="${l.tags}"></strong>
+                        Categories: <strong data-th-text="${l.categories}"></strong>
+                    </span>
+
+                   
+                </td>
+            </tr>
+        </table>
+    </table>
+
+</form>
+    </div> -->
+    
+</body>
+</html>
