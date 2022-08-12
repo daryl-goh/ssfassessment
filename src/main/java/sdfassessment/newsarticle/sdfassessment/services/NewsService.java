@@ -65,16 +65,9 @@ public class NewsService {
     private RedisTemplate<String, String> redisTemplate;
     private NewsRepository newsRepo;
     
-    // public void saveArticles(List<News> articles) {
-    //     String id = articles.getId();
-    //     List<News> articles = new LinkedList<>();
-    //     ListOperations<String, String> listOps = redisTemplate.opsForList();
-    //     listOps.leftPushAll(id, 
-	// 			contents.stream()
-	// 				.map(v -> v.toJson().toString()).toList()
-	// 	);
-
-    // }
+    public List<News> saveArticles() {
+        return null; // i made a mistake
+    }
 
     
     public Optional<News> getArticlesById(String id) {
